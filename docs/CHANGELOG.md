@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0
+
+- Added full Unit 1-145 textbook metadata in `data/units.json`.
+- Split stable unit metadata from Jason's progress state.
+- Added Unit 1-32 placeholder content files.
+- Aligned Unit 33-43 titles and learning direction with the textbook outline.
+- Added `content/learning-notes` for preserving useful ChatGPT context.
+- Added content placeholder and validation scripts.
+
 ## 0.1.1
 
 - Added README.

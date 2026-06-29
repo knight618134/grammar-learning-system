@@ -12,12 +12,15 @@ The product should optimize for long-term study rather than one-time reading.
 
 ## MVP Scope
 
-The MVP covers Units 33-43.
+The active MVP covers Units 33-43, with a full Unit 1-145 textbook skeleton available for navigation and future expansion.
 
 Core features:
 
 - Dashboard showing unit progress
 - Unit pages backed by content files
+- Full unit metadata in `data/units.json`
+- Placeholder content for foundation units before detailed notes are written
+- Learning notes for saving useful ChatGPT context
 - Wrong-answer review grouped by category
 - Review test records and accuracy
 - Local data storage with no account system
@@ -54,6 +57,15 @@ The first supported categories are:
 - Conditionals
 - Passive
 - Modal Verbs
+
+## Context Preservation
+
+ChatGPT context should not be treated as long-term memory. Useful explanations, confusing points, and wrong-answer patterns should be saved into:
+
+- `content/learning-notes`
+- `content/units/*.mdx`
+- `data/wrong-answers.json`
+- `content/reviews/*.json`
 
 ## Non-Goals For MVP
 

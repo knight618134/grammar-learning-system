@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "content:placeholders": "node scripts/generate-placeholder-units.mjs",
+    "content:validate": "node scripts/validate-content.mjs",
+    "typecheck": "tsc --noEmit --project tsconfig.typecheck.json"
   },
   "dependencies": {
     "next": "^16.2.9",

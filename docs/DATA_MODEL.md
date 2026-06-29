@@ -1,5 +1,25 @@
 # Data Model
 
+## Unit Metadata
+
+File: `data/units.json`
+
+```ts
+type UnitMetadata = {
+  unit: number;
+  title: string;
+  slug: string;
+  part: string;
+  priority: "foundation" | "active" | "future";
+};
+```
+
+Current purpose:
+
+- Stores the full Unit 1-145 textbook skeleton.
+- Separates stable textbook metadata from Jason's personal progress.
+- Allows placeholder pages to exist before full notes are written.
+
 ## Progress
 
 File: `data/progress.json`
@@ -7,9 +27,8 @@ File: `data/progress.json`
 ```ts
 type UnitStatus = "completed" | "in_progress" | "next";
 
-type UnitProgress = {
+type UnitProgressState = {
   unit: number;
-  title: string;
   status: UnitStatus;
   mastery: number;
   weaknesses: string[];
@@ -24,18 +43,11 @@ Current purpose:
 
 Future consideration:
 
-Separate stable unit metadata from user progress:
-
-```text
-data/units.json
-data/progress.json
-```
-
-This will make it easier to support multiple learners or reset progress without touching unit titles.
+Progress stores Jason's learning state only. Titles and textbook grouping live in `data/units.json`.
 
 ## Unit Content
 
-Files: `content/units/unit-33.mdx` through `content/units/unit-43.mdx`
+Files: `content/units/*.mdx`
 
 Each file includes frontmatter:
 
@@ -54,6 +66,18 @@ Required sections:
 - Jason's Confusing Points
 - Wrong Answers
 - One-line Summary
+
+Units 1-32 currently have placeholder files. Units 33-43 contain active learning notes aligned to the textbook outline. Units without a file can still render a generated placeholder page from `data/units.json`.
+
+## Learning Notes
+
+Folder: `content/learning-notes`
+
+Purpose:
+
+- Save Jason-specific learning memory from ChatGPT sessions.
+- Keep confusing points and useful explanations outside the temporary context window.
+- Act as an inbox before notes are sorted into unit files, wrong answers, or reviews.
 
 ## Wrong Answers
 

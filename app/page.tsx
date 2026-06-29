@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { StatusBadge } from "@/components/StatusBadge";
 import {
+  getActiveStudyUnits,
   getProgress,
   getReviewRecords,
   getWeaknessRanking,
@@ -8,7 +9,8 @@ import {
 } from "@/lib/content";
 
 export default function DashboardPage() {
-  const units = getProgress();
+  const allUnits = getProgress();
+  const units = getActiveStudyUnits();
   const weaknessRanking = getWeaknessRanking();
   const wrongAnswers = getWrongAnswers();
   const reviews = getReviewRecords();
@@ -29,11 +31,11 @@ export default function DashboardPage() {
           <div className="mt-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-bold text-ink">
-                Units 33-43 Progress
+                Active Study Window
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-ink/70">
-                Track grammar status, review weak points, and keep Jason's
-                confusing points close to the examples.
+                Track Units 33-43 now, while the full textbook skeleton is ready
+                for Units 1-145 behind the scenes.
               </p>
             </div>
             <Link
@@ -60,7 +62,7 @@ export default function DashboardPage() {
             <span className="text-sm text-ink/55">{units.length} units</span>
           </div>
           <div className="grid gap-3 md:grid-cols-2">
-            {units.map((unit) => (
+              {units.map((unit) => (
               <Link
                 key={unit.unit}
                 href={`/units/unit-${unit.unit}`}
@@ -138,6 +140,7 @@ export default function DashboardPage() {
             </div>
             <p className="mt-4 text-sm text-ink/60">
               {wrongAnswers.length} wrong-answer seeds are ready for review.
+              Full textbook skeleton: {allUnits.length} units.
             </p>
           </div>
         </div>

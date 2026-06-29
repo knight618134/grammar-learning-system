@@ -12,7 +12,7 @@ export function UnitNav({
   return (
     <aside className="rounded-lg border border-ink/10 bg-white p-3 shadow-soft">
       <p className="mb-3 px-2 text-xs font-semibold uppercase tracking-wide text-ink/50">
-        Units 33-43
+        Unit Path
       </p>
       <div className="space-y-1">
         {units.map((unit) => (

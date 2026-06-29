@@ -8,16 +8,23 @@
 - [x] Add review records for Unit 42 and Unit 43
 - [x] Push initial project to GitHub
 - [x] Add project documentation
+- [x] Add Unit 1-145 textbook metadata
+- [x] Split unit metadata from progress state
+- [x] Add Unit 1-32 placeholders
+- [x] Align Unit 33-43 titles with the textbook outline
+- [x] Add learning notes for saved ChatGPT context
 
 ## Next
 
-- [ ] Add content validation script for required unit sections
+- [x] Add content validation script for required unit sections
 - [ ] Add `README.md` screenshots or page descriptions
 - [ ] Extract Dashboard widgets into components
 - [ ] Add `WrongAnswerCard` component
 - [ ] Add `ReviewAccuracyCard` component
 - [ ] Add unit metadata file separate from progress state
 - [ ] Add search/filter design for future Unit 1-145 scale
+- [ ] Add a Units index/search page for all 145 units
+- [ ] Import useful Passive/Wish/Conditionals context from ChatGPT shares
 
 ## Later
 

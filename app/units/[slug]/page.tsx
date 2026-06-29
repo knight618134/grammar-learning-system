@@ -3,6 +3,7 @@ import { MarkdownBlock } from "@/components/MarkdownBlock";
 import { StatusBadge } from "@/components/StatusBadge";
 import { UnitNav } from "@/components/UnitNav";
 import {
+  getActiveStudyUnits,
   getMissingSections,
   getProgress,
   getUnitContent,
@@ -28,10 +29,14 @@ export default async function UnitPage({
 
   const unit = getUnitContent(slug);
   const missingSections = getMissingSections(unit);
+  const activeStudyUnits = getActiveStudyUnits();
+  const navUnits = activeStudyUnits.some((item) => item.unit === unit.unit)
+    ? activeStudyUnits
+    : units.filter((item) => item.part === progress.part);
 
   return (
     <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
-      <UnitNav units={units} activeUnit={unit.unit} />
+      <UnitNav units={navUnits} activeUnit={unit.unit} />
       <article className="rounded-lg border border-ink/10 bg-white p-5 shadow-soft md:p-8">
         <div className="flex flex-col gap-4 border-b border-ink/10 pb-6 md:flex-row md:items-start md:justify-between">
           <div>

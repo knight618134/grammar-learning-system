@@ -1,15 +1,28 @@
-export type UnitStatus = "completed" | "in_progress" | "next";
+export type UnitStatus = "completed" | "in_progress" | "next" | "not_started";
 
-export type UnitProgress = {
+export type UnitMetadata = {
   unit: number;
   title: string;
+  slug: string;
+  part: string;
+  priority: "foundation" | "active" | "future";
+};
+
+export type UnitProgressState = {
+  unit: number;
   status: UnitStatus;
   mastery: number;
   weaknesses: string[];
 };
 
+export type UnitProgress = UnitMetadata & UnitProgressState;
+
+export type UnitsData = {
+  units: UnitMetadata[];
+};
+
 export type ProgressData = {
-  units: UnitProgress[];
+  units: UnitProgressState[];
 };
 
 export type UnitContent = {

@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Grammar in Use Learning System",
   description: "Local-first grammar study dashboard for Units 33-43."
 };

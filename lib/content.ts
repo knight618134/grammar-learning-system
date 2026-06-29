@@ -1,12 +1,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import progressData from "@/data/progress.json";
+import unitsData from "@/data/units.json";
 import wrongAnswersData from "@/data/wrong-answers.json";
 import type {
   ProgressData,
   ReviewRecord,
   UnitContent,
+  UnitMetadata,
   UnitProgress,
+  UnitsData,
   WrongAnswer,
   WrongAnswerCategory
 } from "@/lib/types";
@@ -25,7 +28,33 @@ const sectionTitles = [
 ];
 
 export function getProgress(): UnitProgress[] {
-  return (progressData as ProgressData).units;
+  const progressByUnit = new Map(
+    (progressData as ProgressData).units.map((unit) => [unit.unit, unit])
+  );
+
+  return getUnits().map((unit) => {
+    const progress = progressByUnit.get(unit.unit);
+    return {
+      ...unit,
+      status: progress?.status ?? "not_started",
+      mastery: progress?.mastery ?? 0,
+      weaknesses: progress?.weaknesses ?? []
+    };
+  });
+}
+
+export function getUnits(): UnitMetadata[] {
+  return (unitsData as UnitsData).units;
+}
+
+export function getActiveStudyUnits(): UnitProgress[] {
+  return getProgress().filter(
+    (unit) =>
+      unit.priority === "active" ||
+      unit.status === "completed" ||
+      unit.status === "in_progress" ||
+      unit.status === "next"
+  );
 }
 
 export function getWrongAnswers(): WrongAnswer[] {
@@ -83,11 +112,21 @@ export function getWeaknessRanking() {
 }
 
 export function getUnitSlugs() {
-  return getProgress().map((unit) => `unit-${unit.unit}`);
+  return getUnits().map((unit) => unit.slug);
 }
 
 export function getUnitContent(slug: string): UnitContent {
+  const metadata = getUnits().find((unit) => unit.slug === slug);
+
+  if (!metadata) {
+    throw new Error(`Unknown unit slug: ${slug}`);
+  }
+
   const filePath = path.join(unitsDir, `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) {
+    return getPlaceholderUnitContent(metadata);
+  }
+
   const source = fs.readFileSync(filePath, "utf8");
   const { frontmatter, markdown } = parseFrontmatter(source);
   const sections = parseSections(markdown);
@@ -150,4 +189,38 @@ function parseSections(markdown: string) {
 export function getMissingSections(unit: UnitContent) {
   const existing = new Set(unit.sections.map((section) => section.title));
   return sectionTitles.filter((title) => !existing.has(title));
+}
+
+function getPlaceholderUnitContent(metadata: UnitMetadata): UnitContent {
+  return {
+    unit: metadata.unit,
+    slug: metadata.slug,
+    title: metadata.title,
+    sections: [
+      {
+        title: "Learning Goal",
+        body: "Placeholder. Add Jason's learning goal after this unit becomes active."
+      },
+      {
+        title: "Core Grammar",
+        body: "Placeholder. Summarize the core grammar in Jason's own words."
+      },
+      {
+        title: "Examples",
+        body: "Placeholder. Add short examples from Jason's practice, not copied textbook passages."
+      },
+      {
+        title: "Jason's Confusing Points",
+        body: "Placeholder. Save confusing points from ChatGPT sessions here."
+      },
+      {
+        title: "Wrong Answers",
+        body: "Placeholder. Link or summarize wrong answers related to this unit."
+      },
+      {
+        title: "One-line Summary",
+        body: "Placeholder. Add a one-line memory hook after review."
+      }
+    ]
+  };
 }

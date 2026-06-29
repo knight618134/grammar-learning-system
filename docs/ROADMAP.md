@@ -16,7 +16,9 @@ Status: done
 
 Goal: make the learning content useful enough for daily study.
 
-- Replace seed Unit 33-43 notes with Jason's real notes
+- Keep Unit 33-43 aligned with the textbook outline
+- Save useful ChatGPT context into learning notes and unit files
+- Replace seed Unit 33-43 notes with Jason's real notes over time
 - Add richer examples and Chinese explanations where useful
 - Add unit-level difficulty and review priority
 - Add content validation for required sections
@@ -36,7 +38,7 @@ Goal: turn mistakes into repeatable practice.
 
 Goal: scale from Unit 33-43 to the full Grammar in Use range.
 
-- Add Unit 1-145 metadata
+- Maintain Unit 1-145 metadata
 - Add unit search
 - Add learning path views
 - Add dashboard grouping by grammar topic

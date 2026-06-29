@@ -37,6 +37,19 @@ export function MarkdownBlock({ body }: { body: string }) {
   };
 
   for (const line of lines) {
+    if (line.startsWith("### ")) {
+      flushList();
+      blocks.push(
+        <h4
+          key={`h-${blocks.length}`}
+          className="pt-2 text-sm font-bold uppercase tracking-wide text-leaf"
+        >
+          {renderInline(line.slice(4))}
+        </h4>
+      );
+      continue;
+    }
+
     if (line.startsWith("- ")) {
       listItems.push(line.slice(2));
       continue;

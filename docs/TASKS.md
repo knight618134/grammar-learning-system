@@ -25,6 +25,8 @@
 - [ ] Add search/filter design for future Unit 1-145 scale
 - [ ] Add a Units index/search page for all 145 units
 - [ ] Import useful Passive/Wish/Conditionals context from ChatGPT shares
+- [ ] Convert Unit 38-41 to bilingual A/B/C/D explanations
+- [ ] Convert Unit 26-32 to concise bilingual modal review notes
 
 ## Later
 

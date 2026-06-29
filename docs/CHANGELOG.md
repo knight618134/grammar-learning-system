@@ -8,6 +8,7 @@
 - Aligned Unit 33-43 titles and learning direction with the textbook outline.
 - Added `content/learning-notes` for preserving useful ChatGPT context.
 - Added content placeholder and validation scripts.
+- Added bilingual A/B/C/D explanation style for active unit notes.
 
 ## 0.1.1
 

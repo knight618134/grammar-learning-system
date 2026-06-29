@@ -58,6 +58,27 @@ Each Unit page should make these sections visually easy to scan:
 
 The page should support real study notes, not only short seed paragraphs.
 
+## Bilingual Learning Format
+
+Jason's active units should use bilingual notes, especially for difficult grammar.
+
+Recommended format inside `Core Grammar`:
+
+- `### A. ... / 中文標題`
+- English explanation
+- Chinese explanation
+- short examples
+
+This mirrors the textbook's A/B/C/D teaching rhythm without copying textbook text. The explanations should be original and written for Jason's confusion points.
+
+Active units should include:
+
+- English rule
+- Chinese explanation
+- simple examples
+- Jason-specific warning
+- wrong-answer correction
+
 ## Dashboard Requirements
 
 The Dashboard should answer:

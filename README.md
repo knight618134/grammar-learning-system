@@ -6,6 +6,8 @@ A local-first learning system for studying English Grammar in Use. The current M
 
 - Dashboard for Units 33-43 progress
 - Full textbook unit metadata from Unit 1 to Unit 145
+- Bilingual Level 2 foundation notes for Units 1-25
+- Bilingual review/deep notes for Units 26-46
 - Active unit pages for Units 33-43
 - Placeholder unit pages for foundational Units 1-32
 - MDX-based unit content with fixed learning sections

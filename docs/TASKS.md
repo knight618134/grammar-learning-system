@@ -27,6 +27,9 @@
 - [ ] Import useful Passive/Wish/Conditionals context from ChatGPT shares
 - [x] Convert Unit 38-41 to bilingual A/B/C/D explanations
 - [x] Convert Unit 26-32 to concise bilingual modal review notes
+- [x] Convert Unit 33-37 to bilingual deep modal notes
+- [x] Add Unit 44-46 bilingual passive extension notes
+- [x] Convert Unit 1-25 to bilingual tense/future foundation review notes
 
 ## Later
 

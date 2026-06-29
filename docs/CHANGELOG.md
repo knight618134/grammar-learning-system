@@ -12,6 +12,9 @@
 - Expanded Unit 42-43 Passive into fuller bilingual notes.
 - Converted Unit 38-41 Conditionals/Wish into bilingual notes.
 - Converted Unit 26-32 Modal Verbs into concise bilingual review notes.
+- Converted Unit 33-37 Modal Verbs into bilingual deep notes.
+- Added Unit 44-46 Passive extension bilingual notes.
+- Converted Unit 1-25 into bilingual Level 2 foundation notes.
 
 ## 0.1.1
 

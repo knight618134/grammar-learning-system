@@ -79,6 +79,24 @@ Purpose:
 - Keep confusing points and useful explanations outside the temporary context window.
 - Act as an inbox before notes are sorted into unit files, wrong answers, or reviews.
 
+## Content Status
+
+File: `data/content-status.json`
+
+```ts
+type ContentLevel = "placeholder" | "review_notes" | "deep_notes";
+
+type ContentStatus = {
+  unit: number;
+  level: ContentLevel;
+};
+```
+
+Current purpose:
+
+- Tracks whether a unit is only a skeleton, a bilingual review note, or a deeper Jason-specific note.
+- Keeps the long-term completion plan visible as more units are upgraded.
+
 ## Wrong Answers
 
 File: `data/wrong-answers.json`

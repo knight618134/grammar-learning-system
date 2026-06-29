@@ -9,6 +9,9 @@
 - Added `content/learning-notes` for preserving useful ChatGPT context.
 - Added content placeholder and validation scripts.
 - Added bilingual A/B/C/D explanation style for active unit notes.
+- Expanded Unit 42-43 Passive into fuller bilingual notes.
+- Converted Unit 38-41 Conditionals/Wish into bilingual notes.
+- Converted Unit 26-32 Modal Verbs into concise bilingual review notes.
 
 ## 0.1.1
 

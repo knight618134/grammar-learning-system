@@ -46,7 +46,7 @@ Memory hooks:
 
 Current focus:
 
-- Unit 26-32: ability, deduction, possibility, obligation
+- Unit 26-32: ability, deduction, possibility, obligation, prohibition
 - Unit 33-37: should, had better, would, requests, offers, permission
 
 Memory hooks:
@@ -55,3 +55,5 @@ Memory hooks:
 - **Don't have to** means no obligation.
 - **Can't** can mean negative deduction.
 - **Should have done** means the better action was in the past.
+- **Could have done** means a past possibility or missed chance.
+- **May/might have done** means uncertain past possibility.

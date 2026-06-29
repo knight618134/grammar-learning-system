@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f7faf8;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(238, 244, 241, 0.9), rgba(247, 250, 248, 1) 360px),
+    #f7faf8;
+  color: #182026;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(47, 111, 94, 0.22);
+}

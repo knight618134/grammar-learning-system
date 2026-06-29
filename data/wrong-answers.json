@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "wa-001",
+      "category": "Wish",
+      "unit": 39,
+      "prompt": "I wish I ____ more time to review before the test.",
+      "wrongAnswer": "have",
+      "correctAnswer": "had",
+      "note": "Use past form after wish for an unreal present situation.",
+      "severity": 4
+    },
+    {
+      "id": "wa-002",
+      "category": "Conditionals",
+      "unit": 37,
+      "prompt": "If I had known, I ____ called you earlier.",
+      "wrongAnswer": "will have",
+      "correctAnswer": "would have",
+      "note": "Third conditional uses would have + past participle.",
+      "severity": 5
+    },
+    {
+      "id": "wa-003",
+      "category": "Passive",
+      "unit": 42,
+      "prompt": "The room ____ cleaned when we arrived.",
+      "wrongAnswer": "was being",
+      "correctAnswer": "had been",
+      "note": "The cleaning was completed before another past event.",
+      "severity": 3
+    },
+    {
+      "id": "wa-004",
+      "category": "Modal Verbs",
+      "unit": 38,
+      "prompt": "She ____ be at home. The lights are off.",
+      "wrongAnswer": "must",
+      "correctAnswer": "can't",
+      "note": "Use can't for negative logical deduction.",
+      "severity": 4
+    },
+    {
+      "id": "wa-005",
+      "category": "Passive",
+      "unit": 43,
+      "prompt": "He is said ____ the company in 2020.",
+      "wrongAnswer": "to leave",
+      "correctAnswer": "to have left",
+      "note": "Use to have + past participle when the reported action happened earlier.",
+      "severity": 5
+    },
+    {
+      "id": "wa-006",
+      "category": "Modal Verbs",
+      "unit": 40,
+      "prompt": "You ____ smoke here. It is forbidden.",
+      "wrongAnswer": "don't have to",
+      "correctAnswer": "mustn't",
+      "note": "Mustn't means prohibition; don't have to means no obligation.",
+      "severity": 5
+    }
+  ]
+}

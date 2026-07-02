@@ -1,0 +1,153 @@
+{
+  "questions": [
+    {
+      "id": "q-001",
+      "unit": 43,
+      "source": "Grammar",
+      "topic": "Passive",
+      "prompt": "This report should ____ before the meeting.",
+      "choices": ["check", "checked", "be checked", "been checked"],
+      "answer": "be checked",
+      "explanationEn": "After a modal verb like should, passive uses be + past participle.",
+      "explanationZh": "should 這類情態助動詞後面，被動要用 be + 過去分詞。",
+      "phraseNote": "should be reviewed / should be checked are common work phrases."
+    },
+    {
+      "id": "q-002",
+      "unit": 42,
+      "source": "TOEIC",
+      "topic": "Passive",
+      "prompt": "All applications must ____ by Friday at 5 p.m.",
+      "choices": ["submit", "submitted", "be submitted", "have submitted"],
+      "answer": "be submitted",
+      "explanationEn": "TOEIC often tests notices and office rules. After must, passive uses be submitted.",
+      "explanationZh": "多益常考公告/規定。must 後面的被動是 be submitted。",
+      "phraseNote": "Applications must be submitted by... = 申請必須在...前提交。"
+    },
+    {
+      "id": "q-003",
+      "unit": 40,
+      "source": "Grammar",
+      "topic": "Conditionals",
+      "prompt": "If I had checked the tense, I ____ the mistake.",
+      "choices": ["avoid", "will avoid", "would avoid", "would have avoided"],
+      "answer": "would have avoided",
+      "explanationEn": "This is an unreal past condition. Use if + had done, would have done.",
+      "explanationZh": "這是過去假設：if + had done，結果句用 would have done。",
+      "phraseNote": "I would have avoided... = 我本來可以避免..."
+    },
+    {
+      "id": "q-004",
+      "unit": 39,
+      "source": "Daily English",
+      "topic": "Wish",
+      "prompt": "I wish I ____ more confident when speaking English.",
+      "choices": ["am", "was", "were", "will be"],
+      "answer": "were",
+      "explanationEn": "Wish + past form describes an unreal present. Were is the classic form for unreal situations.",
+      "explanationZh": "wish + 過去式表示現在不是這樣但希望是這樣。were 是標準假設用法。",
+      "phraseNote": "I wish I were more... is useful for self-reflection."
+    },
+    {
+      "id": "q-005",
+      "unit": 38,
+      "source": "IELTS",
+      "topic": "Conditionals",
+      "prompt": "If governments invested more in public transport, cities ____ less polluted.",
+      "choices": ["are", "were", "would be", "will be"],
+      "answer": "would be",
+      "explanationEn": "IELTS writing often uses second conditionals for hypothetical policy results.",
+      "explanationZh": "雅思寫作常用第二條件句表達假設政策結果：if + 過去式, would + 原形。",
+      "phraseNote": "If governments invested more..., cities would... is useful for IELTS Task 2."
+    },
+    {
+      "id": "q-006",
+      "unit": 32,
+      "source": "Daily English",
+      "topic": "Modal Verbs",
+      "prompt": "You ____ bring your own laptop. We have computers here.",
+      "choices": ["mustn't", "don't have to", "can't", "shouldn't have"],
+      "answer": "don't have to",
+      "explanationEn": "Don't have to means it is not necessary. Mustn't means prohibited.",
+      "explanationZh": "don't have to 是不必；mustn't 是禁止，意思差很多。",
+      "phraseNote": "You don't have to... is softer and common in daily English."
+    },
+    {
+      "id": "q-007",
+      "unit": 28,
+      "source": "Native Usage",
+      "topic": "Modal Verbs",
+      "prompt": "She ____ be at the office. Her car isn't there.",
+      "choices": ["must", "can't", "may not", "has to"],
+      "answer": "can't",
+      "explanationEn": "Can't is used for strong negative deduction.",
+      "explanationZh": "can't 可以用來表示強烈負面推論：一定不可能。",
+      "phraseNote": "She can't be there is more natural than she mustn't be there."
+    },
+    {
+      "id": "q-008",
+      "unit": 34,
+      "source": "Grammar",
+      "topic": "Modal Verbs",
+      "prompt": "I ____ the answer before submitting it.",
+      "choices": ["should checked", "should have checked", "should to check", "should have check"],
+      "answer": "should have checked",
+      "explanationEn": "Should have + past participle talks about a better past choice.",
+      "explanationZh": "should have + 過去分詞表示過去本來應該做。",
+      "phraseNote": "I should have checked... = 我本來應該檢查..."
+    },
+    {
+      "id": "q-009",
+      "unit": 45,
+      "source": "Native Usage",
+      "topic": "Passive",
+      "prompt": "He is said ____ the company last year.",
+      "choices": ["leave", "left", "to leave", "to have left"],
+      "answer": "to have left",
+      "explanationEn": "Use is said to have done when the reported action happened earlier.",
+      "explanationZh": "據說的動作發生得更早，要用 is said to have done。",
+      "phraseNote": "is said to have... is common in news and formal writing."
+    },
+    {
+      "id": "q-010",
+      "unit": 46,
+      "source": "Daily English",
+      "topic": "Passive",
+      "prompt": "I had my laptop ____ yesterday.",
+      "choices": ["repair", "repaired", "repairing", "to repair"],
+      "answer": "repaired",
+      "explanationEn": "Have something done uses have + object + past participle.",
+      "explanationZh": "have something done 句型是 have + 受詞 + 過去分詞。",
+      "phraseNote": "I had my laptop repaired = 我請人修了筆電。"
+    },
+    {
+      "id": "q-011",
+      "unit": 25,
+      "source": "TOEIC",
+      "topic": "Future",
+      "prompt": "Please call me when you ____ the report.",
+      "choices": ["will finish", "finish", "finished", "are finish"],
+      "answer": "finish",
+      "explanationEn": "After when in a future time clause, use present simple, not will.",
+      "explanationZh": "未來時間子句 when 後面用現在式，不直接用 will。",
+      "phraseNote": "Please call me when you finish... is common workplace English."
+    },
+    {
+      "id": "q-012",
+      "unit": 17,
+      "source": "Phrases",
+      "topic": "Daily English",
+      "prompt": "Which sentence sounds most natural?",
+      "choices": [
+        "Do you have got a minute?",
+        "Have you a minute?",
+        "Do you have a minute?",
+        "Are you have a minute?"
+      ],
+      "answer": "Do you have a minute?",
+      "explanationEn": "Do you have a minute? is a very common natural phrase.",
+      "explanationZh": "Do you have a minute? 是很自然常用的片語，意思是「你有空一下嗎？」",
+      "phraseNote": "Use this before asking a quick work question."
+    }
+  ]
+}

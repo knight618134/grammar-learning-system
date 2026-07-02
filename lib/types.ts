@@ -65,3 +65,28 @@ export type ReviewRecord = {
   focus: string[];
   notes: string;
 };
+
+export type QuizSource =
+  | "Grammar"
+  | "TOEIC"
+  | "IELTS"
+  | "Daily English"
+  | "Phrases"
+  | "Native Usage";
+
+export type QuizQuestion = {
+  id: string;
+  unit: number;
+  source: QuizSource;
+  topic: string;
+  prompt: string;
+  choices: string[];
+  answer: string;
+  explanationEn: string;
+  explanationZh: string;
+  phraseNote?: string;
+};
+
+export type QuizQuestionsData = {
+  questions: QuizQuestion[];
+};

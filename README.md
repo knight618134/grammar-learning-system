@@ -12,6 +12,7 @@ A local-first learning system for studying English Grammar in Use. The current M
 - Placeholder unit pages for foundational Units 1-32
 - MDX-based unit content with fixed learning sections
 - Jason-specific learning notes for saved ChatGPT context
+- Mixed practice questions with submit-and-check answers
 - Wrong answers grouped by grammar category
 - Review test records for Units 42 and 43
 - Local-first data model with no login requirement
@@ -42,6 +43,7 @@ content/units/        Unit learning content
 content/learning-notes/ Saved Jason-specific learning memory
 content/reviews/      Review test records
 data/                 Local progress and wrong-answer JSON
+data/quiz-questions.json Mixed question bank
 lib/                  Data loading and shared types
 docs/                 Product and engineering documentation
 ```

@@ -1,10 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import progressData from "@/data/progress.json";
+import quizQuestionsData from "@/data/quiz-questions.json";
 import unitsData from "@/data/units.json";
 import wrongAnswersData from "@/data/wrong-answers.json";
 import type {
   ProgressData,
+  QuizQuestion,
+  QuizQuestionsData,
   ReviewRecord,
   UnitContent,
   UnitMetadata,
@@ -59,6 +62,10 @@ export function getActiveStudyUnits(): UnitProgress[] {
 
 export function getWrongAnswers(): WrongAnswer[] {
   return wrongAnswersData.items as WrongAnswer[];
+}
+
+export function getQuizQuestions(): QuizQuestion[] {
+  return (quizQuestionsData as QuizQuestionsData).questions;
 }
 
 export function getWrongAnswersByCategory() {

@@ -154,3 +154,36 @@ Future fields:
 - `questionIds`
 - `wrongAnswerIds`
 - `nextReviewAt`
+
+## Quiz Questions
+
+File: `data/quiz-questions.json`
+
+```ts
+type QuizSource =
+  | "Grammar"
+  | "TOEIC"
+  | "IELTS"
+  | "Daily English"
+  | "Phrases"
+  | "Native Usage";
+
+type QuizQuestion = {
+  id: string;
+  unit: number;
+  source: QuizSource;
+  topic: string;
+  prompt: string;
+  choices: string[];
+  answer: string;
+  explanationEn: string;
+  explanationZh: string;
+  phraseNote?: string;
+};
+```
+
+Current purpose:
+
+- Powers `/practice`.
+- Supports multiple-choice practice with English and Chinese explanations.
+- Allows future missed-question capture into `data/wrong-answers.json`.

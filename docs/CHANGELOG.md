@@ -15,6 +15,8 @@
 - Converted Unit 33-37 Modal Verbs into bilingual deep notes.
 - Added Unit 44-46 Passive extension bilingual notes.
 - Converted Unit 1-25 into bilingual Level 2 foundation notes.
+- Added mixed practice questions with submit-and-check answers.
+- Added TOEIC, IELTS, daily English, phrase, and native-usage question categories.
 
 ## 0.1.1
 

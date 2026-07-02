@@ -30,6 +30,16 @@
 - [x] Convert Unit 33-37 to bilingual deep modal notes
 - [x] Add Unit 44-46 bilingual passive extension notes
 - [x] Convert Unit 1-25 to bilingual tense/future foundation review notes
+- [x] Add mixed practice question bank and submit/check UI
+
+## Next Practice Work
+
+- [ ] Add automatic "save missed question to wrong answers"
+- [ ] Add per-topic practice filters for Passive, Wish, Conditionals, Modal Verbs
+- [ ] Add TOEIC mini test mode
+- [ ] Add IELTS sentence-completion mode
+- [ ] Add daily-life phrase mode
+- [ ] Persist practice results in local storage or JSON export
 
 ## Later
 

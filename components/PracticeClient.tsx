@@ -13,6 +13,25 @@ const sources: Array<"All" | QuizSource> = [
   "Native Usage"
 ];
 
+const breakdownStyles = {
+  clue: {
+    label: "Clue",
+    className: "border-sky/25 bg-sky/10 text-sky"
+  },
+  structure: {
+    label: "Structure",
+    className: "border-gold/30 bg-gold/15 text-gold"
+  },
+  answer: {
+    label: "Answer",
+    className: "border-leaf/25 bg-leaf/10 text-leaf"
+  },
+  warning: {
+    label: "Trap",
+    className: "border-coral/25 bg-coral/10 text-coral"
+  }
+};
+
 export function PracticeClient({ questions }: { questions: QuizQuestion[] }) {
   const [source, setSource] = useState<(typeof sources)[number]>("All");
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -174,6 +193,27 @@ export function PracticeClient({ questions }: { questions: QuizQuestion[] }) {
                     <p className="mt-2 rounded-md bg-white p-3 text-sm text-ink/70">
                       Phrase: {question.phraseNote}
                     </p>
+                  ) : null}
+                  {question.breakdown ? (
+                    <div className="mt-4 grid gap-3 lg:grid-cols-2">
+                      {question.breakdown.map((item) => {
+                        const style = breakdownStyles[item.tone];
+
+                        return (
+                          <div
+                            key={`${question.id}-${item.label}`}
+                            className={`rounded-md border p-3 ${style.className}`}
+                          >
+                            <p className="text-xs font-bold uppercase tracking-wide">
+                              {style.label} · {item.label}
+                            </p>
+                            <p className="mt-2 text-sm leading-6 text-ink/75">
+                              {item.text}
+                            </p>
+                          </div>
+                        );
+                      })}
+                    </div>
                   ) : null}
                 </div>
               ) : null}

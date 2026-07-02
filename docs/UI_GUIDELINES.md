@@ -90,6 +90,23 @@ The Dashboard should answer:
 - What are the current weak points?
 - How did recent reviews go?
 
+## Grammar Map Requirements
+
+The Grammar Map should help Jason understand the whole textbook structure at a glance:
+
+- Group units by grammar family, such as tenses, modals, conditionals, passive, nouns, clauses, prepositions, and phrasal verbs.
+- Show unit ranges, content level, study status, and whether the unit is foundation, active, or future.
+- Keep the map scannable on mobile; dense lists are acceptable when the labels are short and stable.
+
+## Practice Answer Breakdown
+
+Practice explanations should make the answer logic visible:
+
+- `Clue` uses sky for the words or context that reveal the grammar point.
+- `Structure` uses gold for the sentence pattern.
+- `Answer` uses leaf for why the correct choice works.
+- `Trap` uses coral for the common wrong turn Jason might take.
+
 ## Accessibility
 
 - Links and buttons should have visible text.

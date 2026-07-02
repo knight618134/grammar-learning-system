@@ -1,10 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
+import contentStatusData from "@/data/content-status.json";
 import progressData from "@/data/progress.json";
 import quizQuestionsData from "@/data/quiz-questions.json";
 import unitsData from "@/data/units.json";
 import wrongAnswersData from "@/data/wrong-answers.json";
 import type {
+  ContentStatusData,
+  ContentStatusRecord,
   ProgressData,
   QuizQuestion,
   QuizQuestionsData,
@@ -48,6 +51,14 @@ export function getProgress(): UnitProgress[] {
 
 export function getUnits(): UnitMetadata[] {
   return (unitsData as UnitsData).units;
+}
+
+export function getContentStatus(): ContentStatusRecord[] {
+  return (contentStatusData as ContentStatusData).units;
+}
+
+export function getContentLevelDescriptions() {
+  return (contentStatusData as ContentStatusData).levels;
 }
 
 export function getActiveStudyUnits(): UnitProgress[] {

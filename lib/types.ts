@@ -21,6 +21,18 @@ export type UnitsData = {
   units: UnitMetadata[];
 };
 
+export type ContentLevel = "placeholder" | "review_notes" | "deep_notes";
+
+export type ContentStatusRecord = {
+  unit: number;
+  level: ContentLevel;
+};
+
+export type ContentStatusData = {
+  levels: Record<ContentLevel, string>;
+  units: ContentStatusRecord[];
+};
+
 export type ProgressData = {
   units: UnitProgressState[];
 };
@@ -85,6 +97,11 @@ export type QuizQuestion = {
   explanationEn: string;
   explanationZh: string;
   phraseNote?: string;
+  breakdown?: {
+    label: string;
+    text: string;
+    tone: "clue" | "structure" | "answer" | "warning";
+  }[];
 };
 
 export type QuizQuestionsData = {

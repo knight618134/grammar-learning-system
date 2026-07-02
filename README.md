@@ -5,14 +5,16 @@ A local-first learning system for studying English Grammar in Use. The current M
 ## Current MVP
 
 - Dashboard for Units 33-43 progress
+- Grammar Map for Unit 1-145 chapter families
 - Full textbook unit metadata from Unit 1 to Unit 145
 - Bilingual Level 2 foundation notes for Units 1-25
 - Bilingual review/deep notes for Units 26-46
 - Active unit pages for Units 33-43
-- Placeholder unit pages for foundational Units 1-32
+- Bilingual Unit pages for foundational Units 1-32
 - MDX-based unit content with fixed learning sections
 - Jason-specific learning notes for saved ChatGPT context
 - Mixed practice questions with submit-and-check answers
+- Color-coded answer breakdowns for clue, structure, answer, and trap
 - Wrong answers grouped by grammar category
 - Review test records for Units 42 and 43
 - Local-first data model with no login requirement
@@ -42,7 +44,7 @@ components/           Shared UI components
 content/units/        Unit learning content
 content/learning-notes/ Saved Jason-specific learning memory
 content/reviews/      Review test records
-data/                 Local progress and wrong-answer JSON
+data/                 Local progress, content status, and wrong-answer JSON
 data/quiz-questions.json Mixed question bank
 lib/                  Data loading and shared types
 docs/                 Product and engineering documentation

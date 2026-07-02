@@ -10,7 +10,13 @@
       "answer": "be checked",
       "explanationEn": "After a modal verb like should, passive uses be + past participle.",
       "explanationZh": "should 這類情態助動詞後面，被動要用 be + 過去分詞。",
-      "phraseNote": "should be reviewed / should be checked are common work phrases."
+      "phraseNote": "should be reviewed / should be checked are common work phrases.",
+      "breakdown": [
+        { "label": "modal clue", "text": "should 後面一定接原形，所以被動不能直接用 checked。", "tone": "clue" },
+        { "label": "passive form", "text": "modal + be + past participle: should be checked.", "tone": "structure" },
+        { "label": "meaning", "text": "報告是被檢查，不是報告自己檢查別人。", "tone": "answer" },
+        { "label": "common trap", "text": "should checked 少了 be；should been checked 也不對，因為 modal 後要 be。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-002",
@@ -22,7 +28,13 @@
       "answer": "be submitted",
       "explanationEn": "TOEIC often tests notices and office rules. After must, passive uses be submitted.",
       "explanationZh": "多益常考公告/規定。must 後面的被動是 be submitted。",
-      "phraseNote": "Applications must be submitted by... = 申請必須在...前提交。"
+      "phraseNote": "Applications must be submitted by... = 申請必須在...前提交。",
+      "breakdown": [
+        { "label": "deadline clue", "text": "by Friday at 5 p.m. 是多益常見截止時間線索。", "tone": "clue" },
+        { "label": "office notice pattern", "text": "All applications + must + be submitted + by deadline.", "tone": "structure" },
+        { "label": "why passive", "text": "applications 是被提交的東西，所以要用被動。", "tone": "answer" },
+        { "label": "common trap", "text": "must submitted 少了 be；have submitted 會變成申請自己提交。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-003",
@@ -34,7 +46,13 @@
       "answer": "would have avoided",
       "explanationEn": "This is an unreal past condition. Use if + had done, would have done.",
       "explanationZh": "這是過去假設：if + had done，結果句用 would have done。",
-      "phraseNote": "I would have avoided... = 我本來可以避免..."
+      "phraseNote": "I would have avoided... = 我本來可以避免...",
+      "breakdown": [
+        { "label": "past regret clue", "text": "If I had checked 表示過去其實沒有檢查。", "tone": "clue" },
+        { "label": "third conditional", "text": "If + had + Vpp, would have + Vpp.", "tone": "structure" },
+        { "label": "result", "text": "avoid 的過去分詞是 avoided，所以答案是 would have avoided。", "tone": "answer" },
+        { "label": "common trap", "text": "would avoid 是假設現在/未來，不是過去後悔。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-004",
@@ -46,7 +64,13 @@
       "answer": "were",
       "explanationEn": "Wish + past form describes an unreal present. Were is the classic form for unreal situations.",
       "explanationZh": "wish + 過去式表示現在不是這樣但希望是這樣。were 是標準假設用法。",
-      "phraseNote": "I wish I were more... is useful for self-reflection."
+      "phraseNote": "I wish I were more... is useful for self-reflection.",
+      "breakdown": [
+        { "label": "wish clue", "text": "I wish 指現在的願望，通常暗示現實相反。", "tone": "clue" },
+        { "label": "unreal present", "text": "wish + past form: I wish I were / had / knew.", "tone": "structure" },
+        { "label": "best answer", "text": "were 是假設語氣最標準的形式。", "tone": "answer" },
+        { "label": "common trap", "text": "will be 表示未來，不符合 wish 現在反事實。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-005",
@@ -58,7 +82,13 @@
       "answer": "would be",
       "explanationEn": "IELTS writing often uses second conditionals for hypothetical policy results.",
       "explanationZh": "雅思寫作常用第二條件句表達假設政策結果：if + 過去式, would + 原形。",
-      "phraseNote": "If governments invested more..., cities would... is useful for IELTS Task 2."
+      "phraseNote": "If governments invested more..., cities would... is useful for IELTS Task 2.",
+      "breakdown": [
+        { "label": "policy hypothesis", "text": "If governments invested more 表示假設政策，不是在講已發生事實。", "tone": "clue" },
+        { "label": "second conditional", "text": "If + past simple, would + base verb/adjective complement.", "tone": "structure" },
+        { "label": "result clause", "text": "cities would be less polluted 是假設結果。", "tone": "answer" },
+        { "label": "common trap", "text": "will be 太直接，像真實未來預測，不像假設討論。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-006",
@@ -70,7 +100,13 @@
       "answer": "don't have to",
       "explanationEn": "Don't have to means it is not necessary. Mustn't means prohibited.",
       "explanationZh": "don't have to 是不必；mustn't 是禁止，意思差很多。",
-      "phraseNote": "You don't have to... is softer and common in daily English."
+      "phraseNote": "You don't have to... is softer and common in daily English.",
+      "breakdown": [
+        { "label": "context clue", "text": "We have computers here 表示沒有必要自己帶。", "tone": "clue" },
+        { "label": "necessity", "text": "don't have to = not necessary；mustn't = prohibited.", "tone": "structure" },
+        { "label": "natural meaning", "text": "You don't have to bring your own laptop = 你不用自己帶。", "tone": "answer" },
+        { "label": "common trap", "text": "mustn't bring 會變成禁止帶，語氣和意思都太強。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-007",
@@ -82,7 +118,13 @@
       "answer": "can't",
       "explanationEn": "Can't is used for strong negative deduction.",
       "explanationZh": "can't 可以用來表示強烈負面推論：一定不可能。",
-      "phraseNote": "She can't be there is more natural than she mustn't be there."
+      "phraseNote": "She can't be there is more natural than she mustn't be there.",
+      "breakdown": [
+        { "label": "evidence clue", "text": "Her car isn't there 是用證據做推論。", "tone": "clue" },
+        { "label": "negative deduction", "text": "can't + be 表示『一定不可能在』。", "tone": "structure" },
+        { "label": "natural answer", "text": "She can't be at the office = 她不可能在辦公室。", "tone": "answer" },
+        { "label": "common trap", "text": "mustn't 通常是禁止，不是根據證據推論。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-008",
@@ -94,7 +136,13 @@
       "answer": "should have checked",
       "explanationEn": "Should have + past participle talks about a better past choice.",
       "explanationZh": "should have + 過去分詞表示過去本來應該做。",
-      "phraseNote": "I should have checked... = 我本來應該檢查..."
+      "phraseNote": "I should have checked... = 我本來應該檢查...",
+      "breakdown": [
+        { "label": "past action clue", "text": "before submitting it 指提交前的事，通常是在後悔過去。", "tone": "clue" },
+        { "label": "regret pattern", "text": "should have + past participle = 本來應該做但沒做。", "tone": "structure" },
+        { "label": "verb form", "text": "check 的過去分詞是 checked，所以是 should have checked。", "tone": "answer" },
+        { "label": "common trap", "text": "should checked、should to check、should have check 都缺少正確結構。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-009",
@@ -106,7 +154,13 @@
       "answer": "to have left",
       "explanationEn": "Use is said to have done when the reported action happened earlier.",
       "explanationZh": "據說的動作發生得更早，要用 is said to have done。",
-      "phraseNote": "is said to have... is common in news and formal writing."
+      "phraseNote": "is said to have... is common in news and formal writing.",
+      "breakdown": [
+        { "label": "reported passive", "text": "He is said... 是正式英文常見的報導式被動。", "tone": "clue" },
+        { "label": "earlier action", "text": "last year 表示離開公司早於現在的 is said。", "tone": "structure" },
+        { "label": "perfect infinitive", "text": "earlier action 用 to have + past participle: to have left。", "tone": "answer" },
+        { "label": "common trap", "text": "to leave 可能是同時或未來；left 不能直接接在 is said 後。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-010",
@@ -118,7 +172,13 @@
       "answer": "repaired",
       "explanationEn": "Have something done uses have + object + past participle.",
       "explanationZh": "have something done 句型是 have + 受詞 + 過去分詞。",
-      "phraseNote": "I had my laptop repaired = 我請人修了筆電。"
+      "phraseNote": "I had my laptop repaired = 我請人修了筆電。",
+      "breakdown": [
+        { "label": "service clue", "text": "my laptop 通常不是自己修自己，而是請人修。", "tone": "clue" },
+        { "label": "causative passive", "text": "have + object + past participle: had my laptop repaired.", "tone": "structure" },
+        { "label": "meaning", "text": "I had my laptop repaired = 我讓/請人把筆電修好。", "tone": "answer" },
+        { "label": "common trap", "text": "repair 或 to repair 會像自己要去修，不符合 have something done。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-011",
@@ -130,7 +190,13 @@
       "answer": "finish",
       "explanationEn": "After when in a future time clause, use present simple, not will.",
       "explanationZh": "未來時間子句 when 後面用現在式，不直接用 will。",
-      "phraseNote": "Please call me when you finish... is common workplace English."
+      "phraseNote": "Please call me when you finish... is common workplace English.",
+      "breakdown": [
+        { "label": "future meaning", "text": "Please call me 是未來動作，但 when 子句不用 will。", "tone": "clue" },
+        { "label": "time clause", "text": "when / after / before / as soon as + present simple.", "tone": "structure" },
+        { "label": "correct form", "text": "when you finish the report 是自然且正確的工作英文。", "tone": "answer" },
+        { "label": "common trap", "text": "when you will finish 是中文直翻式錯誤。", "tone": "warning" }
+      ]
     },
     {
       "id": "q-012",
@@ -147,7 +213,13 @@
       "answer": "Do you have a minute?",
       "explanationEn": "Do you have a minute? is a very common natural phrase.",
       "explanationZh": "Do you have a minute? 是很自然常用的片語，意思是「你有空一下嗎？」",
-      "phraseNote": "Use this before asking a quick work question."
+      "phraseNote": "Use this before asking a quick work question.",
+      "breakdown": [
+        { "label": "native phrase", "text": "問對方有沒有一點時間，最自然是 Do you have a minute?", "tone": "clue" },
+        { "label": "question form", "text": "do + subject + have + object 是一般現在式問句。", "tone": "structure" },
+        { "label": "work usage", "text": "這句很適合用在工作訊息或開口問問題前。", "tone": "answer" },
+        { "label": "common trap", "text": "Do you have got 混用 do 和 have got；Are you have 文法不成立。", "tone": "warning" }
+      ]
     }
   ]
 }

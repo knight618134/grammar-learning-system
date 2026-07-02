@@ -18,6 +18,8 @@
 - Added mixed practice questions with submit-and-check answers.
 - Added TOEIC, IELTS, daily English, phrase, and native-usage question categories.
 - Standardized Units 1-43 so each unit has at least A/B/C/D grammar explanation sections.
+- Added a Grammar Map page that groups Units 1-145 by grammar family.
+- Added color-coded practice answer breakdowns for clue, structure, answer, and trap.
 
 ## 0.1.1
 

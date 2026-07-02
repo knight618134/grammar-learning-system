@@ -14,6 +14,7 @@ import type {
   ReviewRecord,
   UnitContent,
   UnitMetadata,
+  UnitPracticeSummary,
   UnitProgress,
   UnitsData,
   WrongAnswer,
@@ -77,6 +78,79 @@ export function getWrongAnswers(): WrongAnswer[] {
 
 export function getQuizQuestions(): QuizQuestion[] {
   return (quizQuestionsData as QuizQuestionsData).questions;
+}
+
+export function getQuizQuestionsByUnit(unit: number): QuizQuestion[] {
+  return getQuizQuestions().filter((question) => question.unit === unit);
+}
+
+export function getPracticeCoverage(): UnitPracticeSummary[] {
+  const counts = new Map<number, number>();
+
+  for (const question of getQuizQuestions()) {
+    counts.set(question.unit, (counts.get(question.unit) ?? 0) + 1);
+  }
+
+  return getUnits().map((unit) => ({
+    unit: unit.unit,
+    questionCount: counts.get(unit.unit) ?? 0
+  }));
+}
+
+export function getUnitConfusingPatterns(unit: UnitMetadata): string[] {
+  if (unit.part === "Present and past") {
+    return [
+      "Time signal vs verb form: do not choose tense by Chinese translation only.",
+      "Simple form vs continuous form: habit/fact is different from action in progress.",
+      "Present perfect vs past simple: connected-to-now is different from finished past time."
+    ];
+  }
+
+  if (unit.part === "Future") {
+    return [
+      "Future meaning does not always use will.",
+      "Plans, predictions, promises, and time clauses use different structures.",
+      "After when/after/before/as soon as for future time, use present form."
+    ];
+  }
+
+  if (unit.part === "Modals") {
+    return [
+      "Modal + base verb: do not add to after should/can/must/might.",
+      "Modal + have + past participle talks about past regret or past deduction.",
+      "mustn't means prohibited, but don't have to means not necessary."
+    ];
+  }
+
+  if (unit.part === "Conditionals and wish") {
+    return [
+      "Real condition, unreal present, and unreal past use different timelines.",
+      "wish + past is about an unreal present; wish + past perfect is about past regret.",
+      "would in the result clause is not the same as will in a real condition."
+    ];
+  }
+
+  if (unit.part === "Passive") {
+    return [
+      "Find the receiver of the action before choosing active or passive.",
+      "Passive form is be + past participle; modal passive is modal + be + past participle.",
+      "been done and being done are easy to mix because one is perfect and one is continuous."
+    ];
+  }
+
+  if (unit.part === "Prepositions" || unit.part === "Phrasal verbs") {
+    return [
+      "Many answers depend on collocation, not direct Chinese translation.",
+      "Check whether the word after the preposition is a noun phrase or -ing form.",
+      "Phrasal verbs often change meaning when the particle changes."
+    ];
+  }
+
+  return [
+    "Identify the sentence job first: verb pattern, noun phrase, clause, modifier, or connector.",
+    "Compare the answer choices by structure before choosing by meaning.",
+    "Watch for natural English collocations that do not translate word by word."
+  ];
 }
 
 export function getWrongAnswersByCategory() {

@@ -34,9 +34,15 @@
 - [x] Ensure Units 1-43 all include A/B/C/D-style grammar explanations
 - [x] Add Grammar Map for Unit 1-145 chapter families
 - [x] Add color-coded answer breakdowns for practice questions
+- [x] Add starter practice coverage for every Unit 1-145
+- [x] Add unit-level practice filtering with `/practice?unit=...`
+- [x] Make Dashboard actions link to current unit, practice, and wrong-answer repair
+- [x] Add extra examples and confusing-pattern prompts to Unit pages
 
 ## Next Practice Work
 
+- [ ] Upgrade Units 1-46 from starter question coverage to 3-5 questions per unit
+- [ ] Add richer example banks for active Units 33-46
 - [ ] Add automatic "save missed question to wrong answers"
 - [ ] Add per-topic practice filters for Passive, Wish, Conditionals, Modal Verbs
 - [ ] Add TOEIC mini test mode

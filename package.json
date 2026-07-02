@@ -8,6 +8,7 @@
     "lint": "next lint",
     "content:placeholders": "node scripts/generate-placeholder-units.mjs",
     "content:seed-foundation": "node scripts/seed-foundation-units.mjs",
+    "content:seed-quiz": "node scripts/seed-quiz-coverage.mjs",
     "content:validate": "node scripts/validate-content.mjs",
     "typecheck": "tsc --noEmit --project tsconfig.typecheck.json"
   },

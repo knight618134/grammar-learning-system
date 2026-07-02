@@ -32,18 +32,30 @@ const breakdownStyles = {
   }
 };
 
-export function PracticeClient({ questions }: { questions: QuizQuestion[] }) {
+export function PracticeClient({
+  questions,
+  initialUnit
+}: {
+  questions: QuizQuestion[];
+  initialUnit?: string;
+}) {
   const [source, setSource] = useState<(typeof sources)[number]>("All");
+  const [unit, setUnit] = useState(initialUnit ?? "All");
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const unitOptions = useMemo(() => {
+    const units = Array.from(new Set(questions.map((question) => question.unit)));
+    return units.sort((a, b) => a - b);
+  }, [questions]);
 
   const filtered = useMemo(() => {
-    if (source === "All") {
-      return questions;
-    }
+    return questions.filter((question) => {
+      const sourceMatch = source === "All" || question.source === source;
+      const unitMatch = unit === "All" || question.unit === Number(unit);
 
-    return questions.filter((question) => question.source === source);
-  }, [questions, source]);
+      return sourceMatch && unitMatch;
+    });
+  }, [questions, source, unit]);
 
   const score = filtered.reduce((total, question) => {
     return total + (answers[question.id] === question.answer ? 1 : 0);
@@ -86,12 +98,29 @@ export function PracticeClient({ questions }: { questions: QuizQuestion[] }) {
         </div>
 
         <div className="mt-5 flex flex-wrap gap-2">
+          <select
+            value={unit}
+            onChange={(event) => {
+              setUnit(event.target.value);
+              setAnswers({});
+              setSubmitted(false);
+            }}
+            className="rounded-md border border-ink/10 bg-white px-3 py-2 text-sm font-semibold text-ink/70"
+          >
+            <option value="All">All Units</option>
+            {unitOptions.map((item) => (
+              <option key={item} value={item}>
+                Unit {item}
+              </option>
+            ))}
+          </select>
           {sources.map((item) => (
             <button
               key={item}
               type="button"
               onClick={() => {
                 setSource(item);
+                setAnswers({});
                 setSubmitted(false);
               }}
               className={`rounded-md px-3 py-2 text-sm font-semibold transition ${
@@ -107,6 +136,11 @@ export function PracticeClient({ questions }: { questions: QuizQuestion[] }) {
       </div>
 
       <div className="space-y-4">
+        {filtered.length === 0 ? (
+          <div className="rounded-lg border border-ink/10 bg-white p-6 text-sm text-ink/65 shadow-soft">
+            No questions match this filter yet.
+          </div>
+        ) : null}
         {filtered.map((question, index) => {
           const selected = answers[question.id];
           const isCorrect = selected === question.answer;

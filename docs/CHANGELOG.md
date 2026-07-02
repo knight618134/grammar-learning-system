@@ -20,6 +20,10 @@
 - Standardized Units 1-43 so each unit has at least A/B/C/D grammar explanation sections.
 - Added a Grammar Map page that groups Units 1-145 by grammar family.
 - Added color-coded practice answer breakdowns for clue, structure, answer, and trap.
+- Added starter practice coverage for every Unit 1-145.
+- Added unit-level practice filtering through `/practice?unit=...`.
+- Updated Dashboard into a command center with study, practice, and repair actions.
+- Added extra practice examples and easy-to-confuse pattern prompts on Unit pages.
 
 ## 0.1.1
 

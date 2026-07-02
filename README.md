@@ -4,7 +4,7 @@ A local-first learning system for studying English Grammar in Use. The current M
 
 ## Current MVP
 
-- Dashboard for Units 33-43 progress
+- Dashboard command center with direct study and practice links
 - Grammar Map for Unit 1-145 chapter families
 - Full textbook unit metadata from Unit 1 to Unit 145
 - Bilingual Level 2 foundation notes for Units 1-25
@@ -14,7 +14,9 @@ A local-first learning system for studying English Grammar in Use. The current M
 - MDX-based unit content with fixed learning sections
 - Jason-specific learning notes for saved ChatGPT context
 - Mixed practice questions with submit-and-check answers
+- At least one starter practice question for every Unit 1-145
 - Color-coded answer breakdowns for clue, structure, answer, and trap
+- Unit pages include extra practice examples and easy-to-confuse patterns
 - Wrong answers grouped by grammar category
 - Review test records for Units 42 and 43
 - Local-first data model with no login requirement
@@ -64,5 +66,6 @@ docs/                 Product and engineering documentation
 
 ```bash
 npm run content:placeholders -- 1-32
+npm run content:seed-quiz
 npm run content:validate
 ```

@@ -107,3 +107,8 @@ export type QuizQuestion = {
 export type QuizQuestionsData = {
   questions: QuizQuestion[];
 };
+
+export type UnitPracticeSummary = {
+  unit: number;
+  questionCount: number;
+};

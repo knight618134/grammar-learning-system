@@ -382,7 +382,16 @@ const units = [
 const unitsDir = path.join(process.cwd(), "content", "units");
 
 for (const unit of units) {
-  const core = unit.points
+  const points = [
+    ...unit.points,
+    [
+      "D. Jason Quick Check / Jason 快速檢查",
+      "Before answering, identify the time, verb form, and sentence meaning.",
+      "作答前先判斷時間、動詞形式和句子意思，不要只靠中文直翻。"
+    ]
+  ];
+
+  const core = points
     .map(
       ([heading, en, zh]) => [
         `### ${heading}`,

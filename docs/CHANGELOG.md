@@ -17,6 +17,7 @@
 - Converted Unit 1-25 into bilingual Level 2 foundation notes.
 - Added mixed practice questions with submit-and-check answers.
 - Added TOEIC, IELTS, daily English, phrase, and native-usage question categories.
+- Standardized Units 1-43 so each unit has at least A/B/C/D grammar explanation sections.
 
 ## 0.1.1
 

@@ -79,6 +79,8 @@ Active units should include:
 - Jason-specific warning
 - wrong-answer correction
 
+For Units 1-43, every unit should have at least A/B/C/D grammar explanation subsections in `Core Grammar`.
+
 ## Dashboard Requirements
 
 The Dashboard should answer:

@@ -31,6 +31,7 @@
 - [x] Add Unit 44-46 bilingual passive extension notes
 - [x] Convert Unit 1-25 to bilingual tense/future foundation review notes
 - [x] Add mixed practice question bank and submit/check UI
+- [x] Ensure Units 1-43 all include A/B/C/D-style grammar explanations
 
 ## Next Practice Work
 

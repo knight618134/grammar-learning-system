@@ -7,12 +7,81 @@
   background: #f7faf8;
 }
 
+.dark {
+  color-scheme: dark;
+  background: #101715;
+}
+
 body {
   min-height: 100vh;
   background:
     linear-gradient(180deg, rgba(238, 244, 241, 0.9), rgba(247, 250, 248, 1) 360px),
     #f7faf8;
   color: #182026;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(47, 111, 94, 0.18), transparent 34rem),
+    #101715;
+  color: #e8efec;
+}
+
+.dark .bg-white {
+  background-color: #17211f;
+}
+
+.dark .bg-mist {
+  background-color: #24312e;
+}
+
+.dark .text-ink {
+  color: #eef5f2;
+}
+
+.dark .text-ink\/75,
+.dark .text-ink\/70,
+.dark .text-ink\/65,
+.dark .text-ink\/60,
+.dark .text-ink\/55,
+.dark .text-ink\/50,
+.dark .text-ink\/45 {
+  color: rgba(232, 239, 236, 0.72);
+}
+
+.dark .border-ink\/10,
+.dark .ring-ink\/10 {
+  border-color: rgba(232, 239, 236, 0.12);
+}
+
+html[data-font="sans"] body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "PingFang TC",
+    "Noto Sans TC", sans-serif;
+}
+
+html[data-font="rounded"] body {
+  font-family: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold",
+    "PingFang TC", system-ui, sans-serif;
+}
+
+html[data-font="serif"] body {
+  font-family: Georgia, "Noto Serif TC", "Songti TC", serif;
+}
+
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 430px) {
+  body {
+    background: #f7faf8;
+  }
+
+  .dark body {
+    background: #101715;
+  }
 }
 
 a {

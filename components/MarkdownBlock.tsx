@@ -42,7 +42,7 @@ export function MarkdownBlock({ body }: { body: string }) {
       blocks.push(
         <h4
           key={`h-${blocks.length}`}
-          className="pt-2 text-sm font-bold uppercase tracking-wide text-leaf"
+          className="mt-5 rounded-lg border-l-4 border-leaf bg-white px-4 py-3 text-sm font-bold text-leaf shadow-sm first:mt-0"
         >
           {renderInline(line.slice(4))}
         </h4>

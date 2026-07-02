@@ -38,6 +38,9 @@ export default async function UnitPage({
   const navUnits = activeStudyUnits.some((item) => item.unit === unit.unit)
     ? activeStudyUnits
     : units.filter((item) => item.part === progress.part);
+  const relatedUnits = units
+    .filter((item) => item.part === progress.part)
+    .map((item) => item.unit);
 
   return (
     <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
@@ -61,6 +64,12 @@ export default async function UnitPage({
             >
               Practice Unit {unit.unit}
             </Link>
+            <Link
+              href={`/practice?units=${relatedUnits.join(",")}`}
+              className="rounded-md bg-sky/10 px-3 py-2 text-sm font-semibold text-sky transition hover:bg-sky hover:text-white"
+            >
+              同類單元混合考
+            </Link>
             <StatusBadge status={progress.status} />
           </div>
         </div>
@@ -74,7 +83,7 @@ export default async function UnitPage({
         <div className="mt-8 grid gap-4">
           <section className="rounded-lg border border-sky/20 bg-sky/5 p-5">
             <h3 className="text-lg font-bold text-ink">
-              Extra Examples + Confusing Patterns
+              例句與易混淆重點
             </h3>
             <div className="mt-4 grid gap-4 lg:grid-cols-2">
               <div>
@@ -89,10 +98,10 @@ export default async function UnitPage({
               </div>
               <div>
                 <p className="text-sm font-semibold text-sky">
-                  Practice examples from this unit
+                  本章句型檢查（共 {practiceQuestions.length} 題）
                 </p>
                 <div className="mt-3 space-y-2">
-                  {practiceQuestions.slice(0, 3).map((question) => (
+                  {practiceQuestions.slice(0, 5).map((question) => (
                     <Link
                       key={question.id}
                       href={`/practice?unit=${unit.unit}`}
@@ -102,7 +111,7 @@ export default async function UnitPage({
                         {question.prompt}
                       </span>
                       <span className="mt-1 block text-xs text-ink/55">
-                        {question.source} · {question.topic}
+                        {question.source} · 答案：{question.answer}
                       </span>
                     </Link>
                   ))}

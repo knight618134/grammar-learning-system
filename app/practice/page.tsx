@@ -1,13 +1,20 @@
 import { PracticeClient } from "@/components/PracticeClient";
-import { getQuizQuestions } from "@/lib/content";
+import { getQuizQuestions, getUnits } from "@/lib/content";
 
 export default async function PracticePage({
   searchParams
 }: {
-  searchParams: Promise<{ unit?: string }>;
+  searchParams: Promise<{ unit?: string; units?: string; source?: string }>;
 }) {
-  const { unit } = await searchParams;
+  const { unit, units, source } = await searchParams;
   const questions = getQuizQuestions();
 
-  return <PracticeClient questions={questions} initialUnit={unit} />;
+  return (
+    <PracticeClient
+      questions={questions}
+      units={getUnits()}
+      initialUnits={units ?? unit}
+      initialSource={source}
+    />
+  );
 }

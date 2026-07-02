@@ -46,9 +46,8 @@ export default function DashboardPage() {
                 Today&apos;s Study Command Center
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-ink/70">
-                Continue the active unit, practice the same grammar immediately,
-                then review the weakest patterns. The full Unit 1-145 map now has
-                practice coverage.
+                從章節學習、組合練習到錯題重練，都從這裡繼續。相似文法可在
+                Mind Map 中整組選取，不再只能逐章練習。
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -63,6 +62,12 @@ export default function DashboardPage() {
                 className="inline-flex rounded-md border border-ink/10 px-4 py-2 text-sm font-semibold text-ink/70 transition hover:bg-mist"
               >
                 Practice Unit {currentUnit.unit}
+              </Link>
+              <Link
+                href="/map"
+                className="inline-flex rounded-md border border-ink/10 px-4 py-2 text-sm font-semibold text-ink/70 transition hover:bg-mist"
+              >
+                Open Mind Map
               </Link>
             </div>
           </div>
@@ -90,14 +95,14 @@ export default function DashboardPage() {
         />
         <ActionCard
           title="2. Practice"
-          body={`Answer ${coverageByUnit.get(currentUnit.unit) ?? 0} questions for Unit ${currentUnit.unit}, then check the color breakdown.`}
+          body={`練 Unit ${currentUnit.unit}，或把同類單元合併成 10／20／40 題的自訂測驗。`}
           href={`/practice?unit=${currentUnit.unit}`}
           label="Start practice"
           tone="sky"
         />
         <ActionCard
           title="3. Repair"
-          body="Review weak patterns from wrong answers and update the next study target."
+          body={`目前有 ${wrongAnswers.length} 個錯題紀錄；按類別或單元直接帶回 Practice 重練。`}
           href="/wrong-answers"
           label="Review weaknesses"
           tone="coral"
@@ -163,7 +168,7 @@ export default function DashboardPage() {
               {weaknessRanking.map((weakness, index) => (
                 <Link
                   key={weakness.label}
-                  href={`/practice?unit=${weakness.units.sort((a, b) => a - b)[0]}`}
+                  href={`/practice?units=${weakness.units.sort((a, b) => a - b).join(",")}`}
                   className="flex items-center gap-3 rounded-md bg-mist/60 p-3"
                 >
                   <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white text-sm font-bold text-leaf">

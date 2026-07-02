@@ -5,6 +5,7 @@ import progressData from "@/data/progress.json";
 import quizQuestionsData from "@/data/quiz-questions.json";
 import unitsData from "@/data/units.json";
 import wrongAnswersData from "@/data/wrong-answers.json";
+import { expandPracticeBank } from "@/lib/practice-bank";
 import type {
   ContentStatusData,
   ContentStatusRecord,
@@ -77,7 +78,10 @@ export function getWrongAnswers(): WrongAnswer[] {
 }
 
 export function getQuizQuestions(): QuizQuestion[] {
-  return (quizQuestionsData as QuizQuestionsData).questions;
+  return expandPracticeBank(
+    getUnits(),
+    (quizQuestionsData as QuizQuestionsData).questions
+  );
 }
 
 export function getQuizQuestionsByUnit(unit: number): QuizQuestion[] {
